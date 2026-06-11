@@ -1,11 +1,14 @@
-# Exclude HTML and CSS frontend files from language statistics
+# Ignore Python scripts from repository statistics
+*.py linguist-vendored
+
+# Ignore HTML and CSS frontend files
 *.html linguist-documentation
 *.css linguist-documentation
 
-# Exclude JavaScript frontend logic from statistics 
+# Ignore JavaScript frontend logic 
 *.js linguist-vendored
 
-# Exclude data/configuration files that might be bloating statistics
+# Ignore data/configuration/markdown files
 *.json linguist-documentation
 *.txt linguist-documentation
 *.md linguist-documentation
