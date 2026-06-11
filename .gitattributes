@@ -1,0 +1,7 @@
+# Ignore all HTML and CSS files from language statistics
+*.html linguist-documentation
+*.css linguist-documentation
+
+# If you have a web/ static folder or template folder you want ignored:
+templates/* linguist-documentation
+static/* linguist-documentation
