@@ -1,7 +1,11 @@
-# Ignore all HTML and CSS files from language statistics
+# Exclude HTML and CSS frontend files from language statistics
 *.html linguist-documentation
 *.css linguist-documentation
 
-# If you have a web/ static folder or template folder you want ignored:
-templates/* linguist-documentation
-static/* linguist-documentation
+# Exclude JavaScript frontend logic from statistics 
+*.js linguist-vendored
+
+# Exclude data/configuration files that might be bloating statistics
+*.json linguist-documentation
+*.txt linguist-documentation
+*.md linguist-documentation
