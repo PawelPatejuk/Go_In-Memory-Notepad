@@ -1,0 +1,50 @@
+<div class="step-text">
+<p></p><h5 id="description">Description</h5><p>In this stage, we will work on the basic functionality of our CLI program. It includes the ability to create, print, or delete all notes.</p><h5 id="objectives">Objectives</h5><ul><li><p>Modify the solution for the previous stage by adding three new commands – <code class="java">create</code>, <code class="java">list</code>, and <code class="java">clear</code>.</p></li></ul><p>When the command is <code class="java">create</code>:</p><ul><li><p>The program should interpret the data as a type string and make a new note that contains this text. The program should be able to store up to 5 notes in its memory. The number of notes is a random number. We guarantee that it will be a relatively small number to provide the readability and test-ability;</p></li><li><p>If the <code class="java">create</code> operation is successful, the program should print <code class="java">[OK] The note was successfully created\n</code>;</p></li><li><p>If users try to exceed the maximum number of notes, print <code class="java">[Error] Notepad is full\n</code>.</p></li></ul><p>When the command is <code class="java">clear</code>:</p><ul><li><p>The program should delete all records and print <code class="java">[OK] All notes were successfully deleted\n</code>.</p></li></ul><p>When the command is <code class="java">list</code>:</p><ul><li><p>The program should print all entries using <code class="java">[Info] %d: %s\n</code> as a formatted string. It contains the position (as an integer) and the text of a note at this position. The position starts at <code class="java">1</code>. Do NOT print empty entries!</p></li></ul><p>The program should run in an infinite loop and terminate only when the <code class="java">exit</code> command is received.</p><h5 id="examples">Examples</h5><p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p><p><strong>Example 1:</strong> <em>program execution</em></p><pre><code class="language-no-highlight">Enter a command and data: &gt; create This is my first record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; list
+[Info] 1: This is my first record!
+
+Enter a command and data: &gt; clear
+[OK] All notes were successfully deleted
+
+Enter a command and data: &gt; list
+
+Enter a command and data: &gt; exit
+[Info] Bye!</code></pre><p> <strong>Example 2:</strong> <em>program execution</em></p><pre><code class="language-no-highlight">Enter a command and data: &gt; create This is my first record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; create This is my second record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; create This is my third record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; create This is my forth record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; create This is my fifth record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; create This is my sixth record!
+[Error] Notepad is full
+
+Enter command and data: &gt; list
+[Info] 1: This is my first record!
+[Info] 2: This is my second record!
+[Info] 3: This is my third record!
+[Info] 4: This is my forth record!
+[Info] 5: This is my fifth record!
+
+Enter a command and data: &gt; clear
+[OK] All notes were successfully deleted
+
+Enter a command and data: &gt; create This is my sixth record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; list
+[Info] 1: This is my sixth record!
+
+Enter a command and data: &gt; exit
+[Info] Bye!</code></pre>
+</div>

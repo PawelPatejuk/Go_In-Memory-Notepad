@@ -1,0 +1,75 @@
+<div class="step-text">
+<p></p><h5 id="description">Description</h5><p>Your notepad is already handy, but it's not that user-friendly. For example, you cannot delete an individual note; you need to delete all of them only to create the ones you really need. Let's improve this by adding two new commands – <code class="java">update</code> and <code class="java">delete</code>.</p><h5 id="objectives">Objectives</h5><p>Modify the solution for the previous stage by adding new commands – <code class="java">update</code> and <code class="java">delete</code>.</p><p>When the command is <code class="java">update</code>:</p><ul><li><p>The program should use a space (<code class="java">" "</code>) as a separator to split the data into two pieces – the position (an integer) and the text (a string). Update the text of a note at the given position.</p></li></ul><p>When the command is <code class="java">delete</code>:</p><ul><li><p>The program should interpret the data as a position, delete a note at the given position, and clear this position. Be careful to properly update the remaining positions: the position of a note should represent the order of the notes.</p></li></ul><p>The program has to check the position and note before executing the <code class="java">update</code> or <code class="java">delete</code> commands:</p><ul><li><p>If there is no note at the given position, print <code class="java">[Error] There is nothing to update\n</code> or <code class="java">[Error] There is nothing to delete\n</code>;</p></li><li><p>If the program cannot convert the given position-string to the position (an integer), print <code class="java">[Error] Invalid position: %s\n</code>, where <code class="java">%s</code> is the string;</p></li><li><p>If the program cannot find the position-string, print <code class="java">[Error] Missing position argument\n</code>;</p></li><li><p>If the program cannot find the note-string, print <code class="java">[Error] Missing note argument\n</code>;</p></li><li><p>If the position is out-of-boundaries, print <code class="java">[Error] Position %d is out of the boundaries [1, %d]\n</code>, where the second <code class="java">%d</code> is the maximum internal storage size;</p></li><li><p>If the operation was successful, print <code class="java">[OK] The note at position %d was successfully updated\n</code> or <code class="java">[OK] The note at position %d was successfully deleted\n</code>.</p></li></ul><h5 id="examples">Examples</h5><p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p><p><strong>Example 1:</strong> <em>below is the program execution of the </em><code class="java">update</code><em> and </em><code class="java">delete</code><em> commands followed by a few spaces.</em></p><pre><code class="language-no-highlight">Enter the maximum number of notes: &gt; 3
+
+Enter a command and data: &gt; list
+[Info] Notepad is empty
+
+Enter a command and data: &gt; create This is my first record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; list
+[Info] 1: This is my first record!
+
+Enter a command and data: &gt; update 1
+[Error] Missing note argument
+
+Enter a command and data: &gt; update one Updated first note!
+[Error] Invalid position: one
+
+Enter a command and data: &gt; update
+[Error] Missing position argument
+
+Enter a command and data: &gt; update 1 Updated first note!
+[OK] The note at position 1 was successfully updated
+
+Enter a command and data: &gt; list
+[Info] 1: Updated first note!
+
+Enter a command and data: &gt; delete one
+[Error] Invalid position: one
+
+Enter a command and data: &gt; delete
+[Error] Missing position argument
+
+Enter a command and data: &gt; delete 1
+[OK] The note at position 1 was successfully deleted
+
+Enter a command and data: &gt; list
+[Info] Notepad is empty
+
+Enter a command and data: &gt; exit
+[Info] Bye!</code></pre><p> <strong>Example 2:</strong> <em>below is the program execution of the </em><code class="java">create</code><em>, </em><code class="java">update</code><em> and </em><code class="java">delete</code><em> commands followed by a few spaces.</em></p><pre><code class="language-no-highlight">Enter the maximum number of notes: &gt; 3
+
+Enter a command and data: &gt; create This is my first record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; create This is my second record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; list
+[Info] 1: This is my first record!
+[Info] 2: This is my second record!
+
+Enter a command and data: &gt; delete 1
+[OK] The note at position 1 was successfully deleted
+
+Enter a command and data: &gt; list
+[Info] 1: This is my second record!
+
+Enter a command and data: &gt; create This is my third record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; create This is my forth record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; update 2 Updated third record!
+[OK] The note at position 2 was successfully updated
+
+Enter a command and data: &gt; list
+[Info] 1: This is my second record!
+[Info] 2: Updated third record!
+[Info] 3: This is my forth record!
+
+Enter a command and data: &gt; exit
+[Info] Bye!</code></pre>
+</div>

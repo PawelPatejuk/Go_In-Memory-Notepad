@@ -1,0 +1,17 @@
+<div class="step-text">
+<p></p><h5 id="description">Description</h5><p>In this stage, you need to implement a basic CLI program that can read commands and exit when users provide a corresponding command.</p><h5 id="objectives">Objectives</h5><p>The program should run in an infinite loop. The cycle is the following:</p><ul><li><p>The program asks users to input a <code class="language-go">command</code> and <code class="language-go">data</code> by printing <code class="language-go">Enter a command and data:</code></p></li><li><p>The program reads a line from the standard input stream and breaks it into two parts – a <code class="language-go">command</code> and <code class="language-go">data</code>. Use a space (<code class="language-go">" "</code>) as the separator between the <code class="language-go">command</code> and the <code class="language-go">data</code> parts;</p></li><li><p>If the command is <code class="language-go">exit</code>, the program terminates and prints <code class="language-go">[Info] Bye!\n</code>;</p></li><li><p>In all other cases, the program should print the given <code class="language-go">command</code>, followed by the <code class="language-go">data</code>, then print <code class="language-go">\n</code> and go to the next iteration of the infinite loop.</p></li></ul><div class="alert alert-primary"><p>Since the input line will be a whitespace-separated string like: <code class="language-go">"create This is my first record!"</code> you'll need to use a <code class="language-go">Reader</code> or a <code class="language-go">Scanner</code> to properly read whitespace-separated strings from the standard input.</p><p>Below is a code example of using a <code class="language-go">Scanner</code> along with functions of the <code class="language-go">strings</code> package, and slice expressions to split the <code class="language-go">command</code> and <code class="language-go">data</code>.</p><p><strong>Tip:</strong></p><pre><code class="language-go">scanner := bufio.NewScanner(os.Stdin)
+scanner.Scan()
+
+input := strings.Split(scanner.Text(), " ")
+command, data := input[0], strings.Join(input[1:], " ")</code></pre></div><h5 id="example">Example</h5><p>The greater-than symbol followed by a space (<code class="language-go">&gt; </code>) represents the user input. Note that it's not part of the input.</p><p><strong>Example 1:</strong> <em>program execution</em></p><pre><code class="language-no-highlight">Enter a command and data: &gt; create This is my first record!
+create This is my first record!
+
+Enter a command and data: &gt; create This is my second record!
+create This is my second record!
+
+Enter a command and data: &gt; list
+list
+
+Enter a command and data: &gt; exit
+[Info] Bye!</code></pre>
+</div>

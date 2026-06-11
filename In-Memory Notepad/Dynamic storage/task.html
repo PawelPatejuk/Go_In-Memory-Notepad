@@ -1,0 +1,59 @@
+<div class="step-text">
+<p></p><h5 id="description">Description</h5><p>In the previous stage, the maximum number of notes was hard-coded into the program. It is not outright bad, but if you want to store, for example, <code class="java">7</code> notes, you need to change and re-compile the whole program. Let's extend your program by having a dynamically allocated storage of arbitrary size. In this stage, you will still have the upper limit for the size; it will be assigned at the start-up instead of being hard-coded.</p><h5 id="objectives">Objectives</h5><p>Modify the solution for the previous stage to achieve the following:</p><ul><li><p>At the start-up, the program should print <code class="java">Enter the maximum number of notes:</code>, then read an integer from the standard input. The program should interpret this <code class="java">int</code> value as the maximum number of notes inside the program at any given time. If users try to exceed this value via the <code class="java">create</code> command, the program must raise the corresponding error from the previous stage;</p></li><li><p>When the program receives an unspecified command, it should print <code class="java">[Error] Unknown command\n</code>;</p></li><li><p>When the program receives the <code class="java">create</code> command followed by an empty string or by a bunch of spaces, print <code class="java">[Error] Missing note argument\n</code> ;</p></li><li><p>If the program has no notes, the <code class="java">list</code> command should print <code class="java">[Info] Notepad is empty</code>.</p></li></ul><h5 id="examples">Examples</h5><p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p><p><strong>Example 1:</strong> <em>program execution.</em></p><pre><code class="language-no-highlight">Enter the maximum number of notes: &gt; 3
+
+Enter a command and data: &gt; list
+[Info] Notepad is empty
+
+Enter a command and data: &gt; create This is my first record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; list
+[Info] 1: This is my first record!
+
+Enter a command and data: &gt; clear
+[OK] All notes were successfully deleted
+
+Enter a command and data: &gt; list
+[Info] Notepad is empty
+
+Enter a command and data: &gt; exit
+[Info] Bye!</code></pre><p><strong>Example 2:</strong> <em>below is the program execution of the </em><code class="java">create</code><em> command followed by a few spaces.</em></p><pre><code class="language-no-highlight">Enter the maximum number of notes: &gt; 3
+
+Enter a command and data: &gt; create
+[Error] Missing note argument
+
+Enter a command and data: &gt; create
+[Error] Missing note argument
+
+Enter a command and data: &gt; get 2
+[Error] Unknown command
+
+Enter a command and data: &gt; create This is my first record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; create This is my second record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; create This is my third record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; create This is my forth record!
+[Error] Notepad is full
+
+Enter command and data: &gt; list
+[Info] 1: This is my first record!
+[Info] 2: This is my second record!
+[Info] 3: This is my third record!
+
+Enter a command and data: &gt; clear
+[OK] All notes were successfully deleted
+
+Enter a command and data: &gt; create This is my forth record!
+[OK] The note was successfully created
+
+Enter a command and data: &gt; list
+[Info] 1: This is my forth record!
+
+Enter a command and data: &gt; exit
+[Info] Bye!</code></pre>
+</div>

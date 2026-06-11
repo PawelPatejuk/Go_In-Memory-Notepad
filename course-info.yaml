@@ -1,0 +1,17 @@
+type: hyperskill
+title: In-Memory Notepad
+language: English
+summary: "<p>Every day we face a shower of information that pours on us from everywhere.\
+  \ It's easy to forget the most important things in that flow. In this project, you'll\
+  \ create a simple notepad. It won't be able to store the data on the hard drive;\
+  \ it is one of the simplest, yet a practical program, suitable for beginners.</p>"
+programming_language: Go
+content:
+  - In-Memory Notepad
+additional_files:
+  - name: .idea/inspectionProfiles/Project_Default.xml
+    visible: true
+  - name: requirements.txt
+    visible: true
+mode: Study
+yaml_version: 5
