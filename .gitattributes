@@ -1,14 +1,14 @@
-# Ignore Python scripts from repository statistics
+# Exclude Python scripts from language statistics
 *.py linguist-vendored
 
-# Ignore HTML and CSS frontend files
+# Exclude HTML and CSS frontend files
 *.html linguist-documentation
 *.css linguist-documentation
 
-# Ignore JavaScript frontend logic 
+# Exclude JavaScript frontend logic 
 *.js linguist-vendored
 
-# Ignore data/configuration/markdown files
+# Exclude data, configuration, and markdown files
 *.json linguist-documentation
 *.txt linguist-documentation
 *.md linguist-documentation
